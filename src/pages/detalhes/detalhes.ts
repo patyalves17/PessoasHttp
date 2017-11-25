@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PessoasProvider } from '../../providers/pessoas/pessoas'
 
 /**
  * Generated class for the DetalhesPage page.
@@ -15,9 +16,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetalhesPage {
   public email: string;
+  public pessoa: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public pessoasProvider:PessoasProvider) {
     this.email = navParams.get("email");
+    this.pessoa= this.pessoasProvider.loadByEmail(this.email);
   }
 
   ionViewDidLoad() {

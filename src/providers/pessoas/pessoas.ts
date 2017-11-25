@@ -31,4 +31,13 @@ export class PessoasProvider {
       });
     }
 
+    public loadByEmail(email: String):any{
+        for (let pessoa of this.pessoas){
+          if (pessoa.email == email){
+            return pessoa;
+          }
+
+        }
+    }
+
 }

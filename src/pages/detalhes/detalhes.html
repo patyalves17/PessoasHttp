@@ -14,5 +14,26 @@
 
 
 <ion-content padding>
+<!--  <ion-avatar item-center>
+    <img src="{{pessoa.picture.large}}">
+  </ion-avatar>
+  <p>{{pessoa.name.first}} {{pessoa.name.last}}</p>
+  <p>{{pessoa.gender}}</p>
+  <p>{{pessoa.location.street}}</p>
+  <p>{{pessoa.location.city}}</p>-->
+
+  <ion-card>
+  <img src="{{pessoa.picture.medium}}"/>
+  <ion-card-content>
+    <ion-card-title>
+      {{pessoa.name.first}} {{pessoa.name.last}}
+      </ion-card-title>
+
+    <p>  <ion-icon name="ios-at" item-start large></ion-icon> {{pessoa.email}}</p>
+      <p>{{pessoa.gender}}</p>
+      <p>{{pessoa.location.street}}</p>
+      <p>{{pessoa.location.city}}</p>
+  </ion-card-content>
+</ion-card>
 
 </ion-content>
