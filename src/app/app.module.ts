@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PessoasProvider } from '../providers/pessoas/pessoas';
+import { DetalhesPage } from '../pages/detalhes/detalhes';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    DetalhesPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { PessoasProvider } from '../providers/pessoas/pessoas';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    DetalhesPage
   ],
   providers: [
     StatusBar,
